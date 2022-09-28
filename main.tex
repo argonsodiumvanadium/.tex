@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\title{Warm up project}
+\author{Arnav Rustagi}
+\date{September 28}
+
+\begin{document}
+\maketitle
+\[ x\textsubscript{1} = \frac{x\textsubscript{5}}{2} \]
+\[ x\textsubscript{2} = \frac{x\textsubscript{1}}{4} \]
+\[ x\textsubscript{3} = \frac{x\textsubscript{2}}{2} \]
+\[ x\textsubscript{4} = \frac{x\textsubscript{1}}{4} + \frac{x\textsubscript{2}}{2} + \frac{x\textsubscript{5}}{2}\]
+\[ x\textsubscript{5} = \frac{x\textsubscript{1}}{4} + x\textsubscript{3} + x\textsubscript{4} + x\textsubscript{6}\]
+\[ x\textsubscript{6} = \frac{x\textsubscript{1}}{4} \]
+\textbf{Problem 1 :} Write the above system of equations (1.1) into the form x = xP and y = Ay, where x = (x1 , x2 , x3 , x4 , x5 , x6 ) and y = xT.
+\\\\\textbf{Answer :}
+\\for the \(x = Ax\) form
+\[x = xP\]
+$$
+\begin{bmatrix}
+	x\textsubscript{1}&
+	x\textsubscript{2}&
+	x\textsubscript{3}&
+	x\textsubscript{4}&
+	x\textsubscript{5}&
+	x\textsubscript{6}&
+\end{bmatrix}= 
+\begin{bmatrix}
+	x\textsubscript{1} &
+	x\textsubscript{2} &
+	x\textsubscript{3} &
+	x\textsubscript{4} &
+	x\textsubscript{5} &
+	x\textsubscript{6} &
+\end{bmatrix}
+\begin{bmatrix} 
+	0 & 0.25 & 0   & 0.25 & 0.25 & 0.25 \\
+	0   & 0  & 0.5 & 0.5  & 0   & 0\\
+	0   & 0  & 0   & 0    & 1   & 0 \\
+	0   & 0  & 0   & 0    & 1   & 0 \\
+	0.5 & 0  & 0   & 0    & 0   & 0 \\
+	0   & 0  & 0   & 0.5    & 1   & 0 \\
+\end{bmatrix}
+$$\\
+And for the \(y = Ay\) form
+\[y = Ay\]
+$$
+\begin{bmatrix}
+	x\textsubscript{1}\\
+	x\textsubscript{2}\\
+	x\textsubscript{3}\\
+	x\textsubscript{4}\\
+	x\textsubscript{5}\\
+	x\textsubscript{6}\\
+\end{bmatrix}= 
+\begin{bmatrix} 
+	0 & 0 & 0 & 0 & 0.5 & 0 \\
+	0.25 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0.5 & 0 & 0 & 0 & 0 \\
+	0.25 & 0.5 & 0 & 0 & 0 & 0.5 \\
+	0.25 & 0 & 1 & 1 & 0 & 1 \\
+	0.25 & 0 & 0 & 0 & 0 & 0 \\
+\end{bmatrix}
+\begin{bmatrix}
+	x\textsubscript{1}\\
+	x\textsubscript{2}\\
+	x\textsubscript{3}\\
+	x\textsubscript{4}\\
+	x\textsubscript{5}\\
+	x\textsubscript{6}\\
+\end{bmatrix}
+$$
+\textbf{Problem 2 :} Using pen and paper, find the basis of column space and row space of matrices P and A. Do you find any relation between the basis of column space of P and row space of A. Also write a MATLAB code to find the basis of column space and row space of both matrices and verify your answer.
+\\\\\textbf{Answer :}
+\\
+$$
+\begin{bmatrix} 
+	0   `& 0.25 & 0   & 0.25 & 0.25 & 0.25 \\
+	0   & 0    & 0.5 & 0.5  & 0   & 0     \\
+	0   & 0    & 0   & 0    & 1   & 0     \\
+	0   & 0    & 0   & 0    & 1   & 0     \\
+	0.5 & 0    & 0   & 0    & 0   & 0     \\
+	0   & 0    & 0   & 0.5  & 1   & 0     \\
+\end{bmatrix}
+$$
+\end{document}
